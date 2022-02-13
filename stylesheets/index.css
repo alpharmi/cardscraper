@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+body {
+    background-color: rgb(240, 240, 240);
+    font-family: 'Roboto', sans-serif;
+}
+
+.cardGrid {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 368px);
+    gap: 10px;
+}
+
+.cardContainer {
+    padding: 10px;
+
+    display: grid;
+    grid-template-areas: "image cardName"
+                         "image cardSet"
+                         "image cardRarity"
+                         "image viewListings";
+    grid-template-rows: auto auto auto 0.4fr 0.75fr;
+    justify-content: start;
+    justify-items: start;
+    align-items: start;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+}
+
+.cardImage {
+    max-width: 150px;
+    margin-right: 10px;
+
+    grid-area: image;
+}
+
+.cardName {
+    margin: 0;
+
+    grid-area: cardName;
+
+    font-size: 20px;
+}
+
+.cardSet {
+    margin: 0;
+
+    grid-area: cardSet;
+
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(150, 150, 150);
+}
+
+.cardRarity {
+    margin: 0;
+
+    grid-area: cardRarity;
+
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(150, 150, 150);
+}
+
+.viewListings {
+    margin-top: 20px;
+
+    grid-area: viewListings;
+}
